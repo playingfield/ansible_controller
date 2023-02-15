@@ -8,6 +8,7 @@ controller_projects:
     scm_type: git
     scm_update_on_launch: false
     scm_url: https://github.com/playingfield/ansible_project.git
+    state: present
   - name: Controller
     organization: Platform
     scm_branch: main
@@ -16,6 +17,7 @@ controller_projects:
     scm_type: git
     scm_update_on_launch: false
     scm_url: https://github.com/playingfield/ansible_controller.git
+    state: present
   - name: Inventory
     organization: Platform
     scm_branch: main
@@ -24,3 +26,4 @@ controller_projects:
     scm_type: git
     scm_update_on_launch: false
     scm_url: https://github.com/playingfield/ansible_inventory.git
+    state: present

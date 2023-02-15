@@ -1,5 +1,13 @@
 ---
 controller_templates:
+  - name: GitOps Reconciliation
+    job_type: run
+    inventory: Controller
+    project: Controller
+    playbook: playbook.yml
+    credentials:
+      - 'ansible-vault'
+    state: present
   - name: Deploy Software
     job_type: run
     inventory: Inventory
@@ -8,3 +16,4 @@ controller_templates:
     credentials:
       - Vagrant
       - 'ansible-vault'
+    state: present
