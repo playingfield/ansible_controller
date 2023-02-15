@@ -1,0 +1,43 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Configure Ansible Controller
+  hosts: localhost
+  connection: local
+  tags: [configure]
+  collections:
+    - awx.awx
+    - infra.controller_configuration
+
+  pre_tasks:
+
+    - name: Configure git
+      ansible.builtin.command: "git config --global core.sshCommand 'ssh -o StrictHostKeyChecking=accept-new'"
+      changed_when: false
+      args:
+        warn: false
+
+    - name: Include vars from configs directory
+      ansible.builtin.include_vars:
+        dir: inventory/group_vars/controller
+        extensions: ["yml"]
+      no_log: true
+      tags:
+        - always
+
+    - name: Wait for API
+      ansible.builtin.uri:
+        url: "https://{{ controller_hostname }}/api/v2/ping"
+        status_code: 200
+        validate_certs: "{{ controller_validate_certs }}"
+      register: result
+      until: result.status == 200
+      retries: 20
+      delay: 3
+      ignore_errors: true
+
+    - name: Update token
+      ansible.builtin.include_tasks: tasks/get_token.yml
+
+  roles:
+    - dispatch  # The dispatch role calls all of the other roles.
+

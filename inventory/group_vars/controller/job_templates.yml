@@ -1,0 +1,10 @@
+---
+controller_templates:
+  - name: Deploy Software
+    job_type: run
+    inventory: Inventory
+    project: Project
+    playbook: playbook.yml
+    credentials:
+      - Vagrant
+      - 'ansible-vault'

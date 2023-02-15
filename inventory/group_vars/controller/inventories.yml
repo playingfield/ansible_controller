@@ -1,0 +1,6 @@
+---
+controller_inventories:
+  - name: Controller
+    organization: Platform
+  - name: Inventory
+    organization: Platform

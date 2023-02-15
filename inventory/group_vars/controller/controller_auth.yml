@@ -1,0 +1,5 @@
+---
+# User may add controller auth creds to this file and encrypt it using `ansible-vault`
+controller_validate_certs: false
+controller_username: admin
+controller_password: 'IT-audited?'
