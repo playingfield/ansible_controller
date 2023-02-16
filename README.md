@@ -13,13 +13,14 @@ Four key principles of GitOps (a term coined by WeaveWorks)
 
 ## Bootstrapping the Controller
 
-When we want to adhere to these principles we need to bootstrap the configuration so that:
+When we want to adhere to these principles we need to [provision](https://github.com/playingfield/provisioning) the platform so that:
 
+- Reconciliation can run using Ansible Automation Platform
 - An organization with galaxy_credentials is present
 - Minimal credentials types: Source Control, Vault, Machine
-- The Controller project, this repo
-- An inventory with localhost
-- A job template from the controller project to run the playbook with the credentials.
+- The [Controller](https://github.com/playingfield/ansible_controller) project (this repo), is loaded.
+- An inventory with localhost is owned.
+- A job template from the controller project to run the playbook with the Vault credential.
 
 ## Ansible Controller Project
 
