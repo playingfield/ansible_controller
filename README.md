@@ -22,7 +22,7 @@ When we want to adhere to these principles we need to bootstrap the configuratio
 ## GitOps Controller Configuration
 
 - This repo has [controller configuration](https://github.com/playingfield/ansible_controller/tree/main/inventory/group_vars/controller)
-- Controller configuration manages the Ansible Controller, and adds [ansible_project.git(https://github.com/playingfield/ansible_project) and [ansible_inventory](https://github.com/playingfield/ansible_inventory) as demo.
+- Controller configuration manages the Ansible Controller, and adds [ansible_project.git](https://github.com/playingfield/ansible_project) and [ansible_inventory](https://github.com/playingfield/ansible_inventory) as demo.
 - Forks of this repo can be used to define your whole infra GitOps style.
 - No need to use the API
 - No need to write setup playbooks.
