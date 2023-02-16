@@ -25,7 +25,7 @@ When we want to adhere to these principles we need to [provision](https://github
 ## Ansible Controller Project
 
 - This project has configuration as an `inventory` with `group_vars` for the [controller](https://github.com/playingfield/ansible_controller/tree/main/inventory/group_vars/controller)
-- This configuration manages the Ansible Controller, and adds [ansible_project.git](https://github.com/playingfield/ansible_project) and [ansible_inventory](https://github.com/playingfield/ansible_inventory) as demoes.
+- This configuration manages the Ansible Controller, and adds [ansible_inventory](https://github.com/playingfield/ansible_inventory) and [ansible_project.git](https://github.com/playingfield/ansible_project) and demoes.
 - Forks of this repo can be used to define your whole infra GitOps style.
 - No need to use the API
 - No need to write setup playbooks.
