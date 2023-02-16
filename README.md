@@ -15,7 +15,7 @@ When we want to adhere to these principles we need to bootstrap the configuratio
 
 - An organization with galaxy_credentials is present
 - Minimal credentials types: Source Control, Vault, Machine
-- A controller project like this repo
+- The Controller project, this repo
 - An inventory with localhost
 - A job template from the controller project to run the playbook with the credentials.
 
